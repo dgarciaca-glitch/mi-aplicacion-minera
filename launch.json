@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Streamlit: app.py",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "streamlit",
+      "args": ["run", "app.py"],
+      "justMyCode": true
+    },
+    {
+      "name": "CLI: procesar carpeta",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "arena_core.cli",
+      "args": ["${input:carpeta}", "--out", "salida"]
+    }
+  ],
+  "inputs": [{ "id": "carpeta", "type": "promptString", "description": "Ruta de la carpeta con CSV/Excel" }]
+}
